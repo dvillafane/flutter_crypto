@@ -1,12 +1,14 @@
 import 'dart:convert';
 import 'package:web_socket_channel/io.dart';
 
-class WebSocketService {
+class WebSocketPricesService {
   final String url;
   late final IOWebSocketChannel _channel;
 
-  WebSocketService({
-    this.url = 'wss://ws.coincap.io/prices?assets=bitcoin,ethereum,ripple,litecoin',
+  // Puedes ajustar la lista de activos o usar 'ALL' para todos.
+  WebSocketPricesService({
+    this.url =
+        'wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin',
   }) {
     _channel = IOWebSocketChannel.connect(url);
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/crypto_prices_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,9 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Crypto WebSocket',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: CryptoPricesScreen(),
+      title: 'CoinCap API 2.0 Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      home: HomeScreen(),
     );
   }
 }
